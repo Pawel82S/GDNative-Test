@@ -1,17 +1,18 @@
 use gdnative::prelude::*;
+type InheritType = Node;
 
 #[derive(NativeClass)]
-#[inherit(Node)]
+#[inherit(InheritType)]
 struct HelloWorld;
 
 #[gdnative::methods]
 impl HelloWorld {
-    fn new(_owner: &Node) -> Self {
+    fn new(_owner: &InheritType) -> Self {
         HelloWorld
     }
 
     #[export]
-    fn _ready(&self, _owner: &Node) {
+    fn _ready(&self, _owner: &InheritType) {
         godot_print!("Hello from Rust")
     }
 }
