@@ -1,0 +1,9 @@
+/gdnative/target
+/gdnative/Cargo.lock
+.import/
+
+# Linux specific
+*.so
+
+# Windows specific
+*.dll
